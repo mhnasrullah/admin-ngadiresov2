@@ -1,0 +1,53 @@
+aside{
+    height:100;
+}
+.img-tbl{
+    width : 100px;
+    height : 100px;
+    object-fit: cover;
+    object-position : center;
+}
+.table{
+    width : 200vw;
+}
+main{
+    background-color : #F5F5F5;
+    min-height : 100vh
+}
+.btn-add{
+    width : fit-content;
+}
+a{
+    text-decoration : none;
+    color : black;
+}
+a.active{
+    padding-left : 50px !important;
+    background: #f5f5f5;
+}
+.logo{
+    width : 100px
+}
+nav{
+    border-bottom : 1px solid black;
+}
+nav.n-show{
+    display : none;
+}
+
+@media screen and (min-width:767.8px){
+    .table{
+        width : 100%;
+    }
+}
+@media screen and (min-width:991.8px){
+    nav{
+        border-bottom : 0;
+    }
+    aside{
+        width : 200px;
+    }
+    nav.n-show{
+        display : block;
+    }
+}
