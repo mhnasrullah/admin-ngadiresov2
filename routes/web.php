@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\beritaCon;
+use App\Http\Controllers\wisataCon;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,10 @@ Route::post('/berita/store', [beritaCon::class, 'store']);
 Route::get('/berita/edit/{id}', [beritaCon::class, 'edit']);
 Route::post('/berita/update/{id}', [beritaCon::class, 'update']);
 Route::get('/berita/delete/{id}', [beritaCon::class, 'destroy']);
+
+Route::get('/wisata', [wisataCon::class, 'index']);
+Route::get('/wisata/create', [wisataCon::class, 'create']);
+Route::post('/wisata/store', [wisataCon::class, 'store']);
+Route::get('/wisata/edit/{id}', [wisataCon::class, 'edit']);
+Route::post('/wisata/update/{id}', [wisataCon::class, 'update']);
+Route::get('/wisata/delete/{id}', [wisataCon::class, 'destroy']);

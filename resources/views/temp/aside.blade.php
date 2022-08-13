@@ -8,9 +8,9 @@
         </button>
     </div>
     <nav id="nav">
-        <a href="/berita" class="d-flex align-items-center py-3 px-2 active">
+        <a href="/berita" class="d-flex align-items-center py-3 px-2 {{$active == 'berita' ? 'active' : ''}}">
             <span class="me-2 material-symbols-outlined">feed</span> Berita</a>
-        <a class="d-flex align-items-center py-3 px-2" href="/wisata">
+        <a class="d-flex align-items-center py-3 px-2 {{$active == 'wisata' ? 'active' : ''}}" href="/wisata">
             <span class="me-2 material-symbols-outlined">location_on</span>Wisata</a>
         <a class="d-flex align-items-center py-3 px-2" href="/penyuratan">
             <span class="me-2 material-symbols-outlined">

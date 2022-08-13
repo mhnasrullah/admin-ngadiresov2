@@ -16,6 +16,7 @@ class beritaCon extends Controller
     public function index()
     {
         $data=[
+            'active' => 'berita',
             'data' => Berita::all()
         ];
         // dd($data);
@@ -29,7 +30,10 @@ class beritaCon extends Controller
      */
     public function create()
     {
-        return view('create.berita');
+        $data=[
+            'active' => 'berita'
+        ];
+        return view('create.berita',$data);
     }
 
     /**

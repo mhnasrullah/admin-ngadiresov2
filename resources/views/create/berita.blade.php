@@ -30,7 +30,7 @@
                 <input type="file" class="form-control" id="gambar" name="foto" required>
             </div>
             <button type="submit" class="btn btn-success">Tambah Berita</button>
-            <a href="/" class="btn btn-warning">Kembali</a>
+            <a href="/berita" class="btn btn-warning">Kembali</a>
         </form>
 </main>
 @include('temp.footer')
