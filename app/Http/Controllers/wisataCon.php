@@ -48,7 +48,7 @@ class wisataCon extends Controller
     {
 
         $val = Validator::make($r->all(),[
-            'slug' => 'required|unique:wisatas',
+            'slug' => 'required|unique:wisatas|alpha_dash',
             'nama' => 'required',
             'deskripsi' => 'required',
             'tiket' => 'required',
@@ -59,6 +59,7 @@ class wisataCon extends Controller
         $message = [
             'required' => ':attribute harus diisi',
             'unique' => ':attribute sudah digunakan',
+            'alpha_dash' => 'slug dilarang selain berupa huruf,pisah(-),garis bawah(_)'
         ]);
 
         if($val->fails()){

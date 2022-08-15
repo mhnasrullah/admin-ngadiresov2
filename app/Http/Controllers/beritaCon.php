@@ -45,7 +45,7 @@ class beritaCon extends Controller
     public function store(Request $r)
     {
         $val = Validator::make($r->all(),[
-            'slug' => 'required|unique:beritas',
+            'slug' => 'required|unique:beritas|alpha_dash',
             'judul' => 'required',
             'text' => 'required',
             'foto' => 'required|mimes:jpg,png,jpeg',
@@ -54,6 +54,7 @@ class beritaCon extends Controller
             'required' => ':attribute harus diisi',
             'unique' => ':attribute sudah digunakan',
             'mimes' => 'format :attribute harus berupa jpg,png,jpeg',
+            'alpha_dash' => 'slug dilarang selain berupa huruf,pisah(-),garis bawah(_)'
         ]);
 
         if($val->fails()){

@@ -35,7 +35,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" required>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="admin@..." required>
                         @if (session()->has('error'))
                         @if (isset(session('error')['error']['email']))
                             @foreach (session('error')['error']['email'] as $e)
@@ -46,7 +46,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-                        <input class="form-control" type="password" id="exampleFormControlTextarea1" name="password" required>
+                        <input class="form-control" type="password" id="exampleFormControlTextarea1" name="password" placeholder="password..." required>
                         @if (session()->has('error'))
                         @if (isset(session('error')['error']['password']))
                             @foreach (session('error')['error']['password'] as $e)

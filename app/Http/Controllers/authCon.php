@@ -120,9 +120,6 @@ class authCon extends Controller
             }else{
                 return redirect()->to('/login')->with('notCorrect','Email atau password tidak sesuai');
         }
-        // return back()->withErrors([
-        //     'email' => 'The provided credentials do not match our records.',
-        // ]);
     }
 
     public function register(Request $r){

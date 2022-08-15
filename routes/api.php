@@ -2,7 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\faqApiC;
+use App\Http\Controllers\Api\dokumenApiC;
+use App\Http\Controllers\Api\dashApiC;
+use App\Http\Controllers\Api\beritaApiC;
+use App\Http\Controllers\Api\wisataApiC;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('edit',[dashApiC::class,'index']);
+Route::get('dokumen',[dokumenApiC::class,'index']);
+Route::get('faq',[faqApiC::class,'index']);
+Route::get('berita',[beritaApiC::class,'index']);
+Route::get('wisata',[wisataApiC::class,'index']);
+Route::get('berita/{slug}',[beritaApiC::class,'one']);
+Route::get('wisata/{slug}',[wisataApiC::class,'one']);
