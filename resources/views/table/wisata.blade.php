@@ -18,12 +18,12 @@
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Deskripsi</th>
-                <th scope="col">Alamat</th>
                 <th scope="col">Slug</th>
+                <th scope="col">Waktu</th>
                 <th scope="col">Aksi</th>
               </tr>
             </thead>
-            {{-- <tbody>
+            <tbody>
             @php
                 $counter = 0;
             @endphp
@@ -33,24 +33,35 @@
             @endphp
                 <tr>
                 <th scope="row">{{$counter}}</th>
-                <td>{{$d['judul']}}</td>
-                <td><img src="{{$d['foto']}}" class="img-tbl"></td>
+                <td>{{$d['nama']}}</td>
+                <td>{{$d['alamat']}}</td>
                 <td>{{$d['slug']}}</td>
+                <td>{{$d['waktu']}}</td>
                 <td class="d-flex">
-                    <a href="/berita/edit/{{$d['id']}}" class="btn btn-outline-success d-flex justify-content-center align-items-center mx-1">
+                    <a data-bs-toggle="tooltip" title="Edit" href="/wisata/edit/{{$d['id']}}" class="btn btn-outline-success d-flex justify-content-center align-items-center mx-1">
                         <span class="material-symbols-outlined">
                             edit
                             </span>
                     </a>
-                    <a href="/berita/delete/{{$d['id']}}" class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1">
+                    <a href="/wisata/delete/{{$d['id']}}" data-bs-toggle="tooltip" title="Hapus" class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1">
                         <span class="material-symbols-outlined">
                             delete
+                            </span>
+                    </a>
+                    <a href="/wisata/{{$d['id']}}/gambar" data-bs-toggle="tooltip" title="Gambar" class="btn btn-outline-success d-flex justify-content-center align-items-center mx-1">
+                        <span class="material-symbols-outlined">
+                            photo
+                            </span>
+                    </a>
+                    <a href="/wisata/{{$d['id']}}/faq" data-bs-toggle="tooltip" title="Faq" class="btn btn-outline-warning d-flex justify-content-center align-items-center mx-1">
+                        <span class="material-symbols-outlined">
+                            help
                             </span>
                     </a>
                 </td>
                 </tr>
             @endforeach
-            </tbody> --}}
+            </tbody>
           </table>
     </div>
 </main>

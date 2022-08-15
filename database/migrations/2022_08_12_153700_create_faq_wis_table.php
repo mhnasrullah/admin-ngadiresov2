@@ -16,7 +16,7 @@ class CreateFaqWisTable extends Migration
         Schema::create('faq_wis', function (Blueprint $table) {
             $table->id();
             $table->string('quest');
-            $table->string('ans');
+            $table->longText('ans');
             $table->unsignedBigInteger('wisata_id');
             $table->timestamps();
 

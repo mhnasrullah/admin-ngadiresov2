@@ -64,7 +64,6 @@ class beritaCon extends Controller
                 'oldtext' => $r->text,
             ];
             return redirect()->to('/berita/create')->with('error',$error);
-            // return redirect()->to('/berita/create')->with('error',$val->errors());
         }
 
         $file = $r->file('foto');
@@ -99,7 +98,10 @@ class beritaCon extends Controller
      */
     public function edit($id)
     {
-        $data = Berita::find($id);
+        $data = [
+            'data' => Berita::find($id),
+            'active' => 'berita'
+        ];
         return view('edit.berita',$data);
     }
 
