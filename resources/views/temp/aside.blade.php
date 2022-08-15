@@ -22,7 +22,11 @@
             <span class="me-2 material-symbols-outlined">
                 help_center
                 </span>Faq</a>
-        <a class="d-flex align-items-center py-3 px-2 text-danger" href="/keluar">
+        <a class="d-flex align-items-center py-3 px-2 {{$active == 'akun' ? 'active' : ''}}" href="/akun/edit">
+            <span class="me-2 material-symbols-outlined">
+                person
+                </span>Akun</a>
+        <a class="d-flex align-items-center py-3 px-2 text-danger" href="/logout">
             <span class="me-2 material-symbols-outlined">
                 logout
                 </span>Keluar</a>

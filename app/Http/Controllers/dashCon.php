@@ -36,6 +36,53 @@ class dashCon extends Controller
         return redirect()->to('/')->with('success','Data berhasil diperbarui');
     }
 
+    public function updTextSejarah(Request $r){
+        $data = Edit::first();
+        $data->textSejarah = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+
+    public function updTextKabar(Request $r){
+        $data = Edit::first();
+        $data->textKabar = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+
+    public function updTextFaq(Request $r){
+        $data = Edit::first();
+        $data->textFaq = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+
+    public function updTextWisata(Request $r){
+        $data = Edit::first();
+        $data->textWisata = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+
+    public function updTextSeDesa(Request $r){
+        $data = Edit::first();
+        $data->sejarahDesa = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+    public function updTextSeTirta(Request $r){
+        $data = Edit::first();
+        $data->sejarahTirta = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+    public function updTextSurat(Request $r){
+        $data = Edit::first();
+        $data->textSurat = $r->text;
+        $data->save();
+        return redirect()->to('/')->with('success','Data berhasil diperbarui');
+    }
+
     public function updSamKades(Request $r){
         $data = Edit::first();
         $data->sambutanKades = $r->text;
@@ -54,12 +101,16 @@ class dashCon extends Controller
         $data = Edit::first();
         $data->jmlPria = $r->text;
         $data->save();
+        $data->jmlPenduduk = $r->text + $data->jmlWanita;
+        $data->save();
         return redirect()->to('/')->with('success','Data berhasil diperbarui');
     }
 
     public function jmlWanita(Request $r){
         $data = Edit::first();
         $data->jmlWanita = $r->text;
+        $data->save();
+        $data->jmlPenduduk = $r->text + $data->jmlPria;
         $data->save();
         return redirect()->to('/')->with('success','Data berhasil diperbarui');
     }

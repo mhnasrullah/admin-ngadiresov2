@@ -4,6 +4,27 @@ body{
 aside{
     height:100;
 }
+
+.jmbt{
+    grid-area : jmbt;
+}
+.tendes{
+    grid-area : tendes;
+}
+.imgtendes{
+    grid-area : imgtendes;
+}
+.register{
+    width : 100%
+}
+.grid{
+    gap : 1rem;
+    display : grid;
+    grid-template-areas : 
+    "jmbt"
+    "tendes"
+    "imgtendes"
+}
 .img-tbl{
     width : 100px;
     height : 100px;
@@ -48,6 +69,9 @@ nav.n-show{
     .table{
         width : 100%;
     }
+    .register{
+        width : 80%
+    }
 }
 @media screen and (min-width:991.8px){
     nav{
@@ -61,5 +85,14 @@ nav.n-show{
     }
     .img-dashboard{
         height : 350px;
+    }
+    .grid{
+        display : grid;
+        grid-template-areas : 
+        "jmbt jmbt"
+        "tendes imgtendes"
+    }
+    .register{
+        width : 40%
     }
 }
