@@ -26,6 +26,18 @@ $('#snsambutankades').summernote(sum);
 $('#snsetirta').summernote(sum);
 $('#snsedesa').summernote(sum);
 
+document.querySelectorAll('.btn-outline-danger').forEach(
+  (e)=>{
+    e.addEventListener('click',(ev)=>{
+      if(confirm('Apakah anda ingin menghapus data ini?')){
+        return true;
+      }else{
+        ev.preventDefault();
+        ev.stopPropagation();
+        return false;
+      }
+  })
+})
 
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
