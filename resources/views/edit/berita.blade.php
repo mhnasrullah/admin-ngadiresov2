@@ -52,7 +52,7 @@
                     @endif
                 @endif
             </div>
-            <button type="submit" class="btn btn-success">Tambah Berita</button>
+            <button type="submit" class="btn btn-success">Ubah Berita</button>
             <a href="/berita" class="btn btn-warning">Batalkan</a>
         </form>
     </div>

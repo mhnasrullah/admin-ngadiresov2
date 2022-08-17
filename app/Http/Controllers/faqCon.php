@@ -17,7 +17,7 @@ class faqCon extends Controller
     {
         $data = [
             'active' => 'faq',
-            'data' => Faq::all()
+            'data' => Faq::orderByDesc('id')->get()
         ];
         return view('table.faq',$data);
     }

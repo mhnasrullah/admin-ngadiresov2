@@ -17,7 +17,7 @@ class beritaCon extends Controller
     {
         $data=[
             'active' => 'berita',
-            'data' => Berita::all()
+            'data' => Berita::orderByDesc('id')->get()
         ];
         // dd($data);
         return view('table.berita',$data);

@@ -12,6 +12,10 @@ class wisataApiC extends Controller
 {
     public function index(){
         $data = Wisata::all();
+        foreach($data as $d){
+            $img = ImgWisata::where('wisata_id',$d['id'])->first();
+            $d['foto'] = $img->foto;
+        }
         return response()->json($data);
     }
     public function one($slug){

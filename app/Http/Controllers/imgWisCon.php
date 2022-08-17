@@ -21,7 +21,7 @@ class imgWisCon extends Controller
             'active' => 'wisata',
             'id_wisata' => $id,
             'wisata' => Wisata::find($id),
-            'data' => ImgWisata::where('wisata_id',$id)->get()
+            'data' => ImgWisata::where('wisata_id',$id)->orderByDesc('id')->get()
         ];
         return view('table.imgwisata',$data);
     }

@@ -20,7 +20,7 @@ class faqWisCon extends Controller
             'active' => 'wisata',
             'wisata' => Wisata::find($id),
             'id_wisata' => $id,
-            'data' => FaqWis::where('wisata_id',$id)->get()
+            'data' => FaqWis::where('wisata_id',$id)->orderByDesc('id')->get()
         ];
         // dd($data['data']);
         return view('table.faqwisata',$data);

@@ -20,7 +20,7 @@ class wisataCon extends Controller
     {
         $data=[
             'active' => 'wisata',
-            'data' => Wisata::all()
+            'data' => Wisata::orderByDesc('id')->get()
         ];
         return view('table.wisata',$data);
     }

@@ -85,8 +85,8 @@
                     @endif
                 @endif
             </div>
-            <button type="submit" class="btn btn-success">Tambah Wisata</button>
-            <a href="/berita" class="btn btn-warning">Kembali</a>
+            <button type="submit" class="btn btn-success">Ubah Wisata</button>
+            <a href="/wisata" class="btn btn-warning">Batalkan</a>
         </form>
     </div>
 </div>

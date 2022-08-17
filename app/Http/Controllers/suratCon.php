@@ -17,7 +17,7 @@ class suratCon extends Controller
     {
         $data = [
             'active' => 'surat',
-            'data' => Penyuratan::all()
+            'data' => Penyuratan::orderByDesc('id')->get()
         ];
         return view('table.dokumen',$data);
     }

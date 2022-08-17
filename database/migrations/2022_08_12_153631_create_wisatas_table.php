@@ -21,7 +21,7 @@ class CreateWisatasTable extends Migration
             $table->string('tiket');
             $table->string('alamat');
             $table->string('waktu');
-            $table->string('map');
+            $table->longText('map');
             $table->string('video')->nullable();
             $table->timestamps();
         });
